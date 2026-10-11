@@ -1,0 +1,41 @@
+[project]
+name = "portfolio-analyzer"
+version = "0.1.0"
+description = "Deterministic US portfolio analytics with grounded Groq explanations"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "groq>=1.7.0",
+    "numpy>=2.5.3",
+    "pandas>=3.0.6",
+    "plotly>=7.1.0",
+    "pydantic>=2.14.0",
+    "python-dotenv>=1.2.4",
+    "scipy>=1.18.1",
+    "streamlit>=1.65.0",
+    "yfinance>=1.7.0",
+]
+
+[project.scripts]
+portfolio-analyzer = "portfolio_analyzer:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pip-audit>=2.10.1",
+    "pytest>=9.1.1",
+    "ruff>=0.17.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
