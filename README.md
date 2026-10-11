@@ -1,4 +1,6 @@
-# Personal Portfolio Analyst
+# Project_portfolio-analyzer-app
+
+Personal US stock portfolio analytics using Streamlit, yfinance, and Groq.
 
 Streamlit US equity/ETF analytics using yfinance and Groq. Decimal average cost, partial sales, splits, XIRR, same-flow benchmark, historical charts and AI-selected verified facts.
 
